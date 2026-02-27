@@ -14,6 +14,12 @@ public class Main {
         AlunoDAO dao = new AlunoDAO();
         int opcao;
 
+        /*
+Trabalho JPA – Cadastro de Alunos
+Aluno: Lucas Pereira Dias do Nascimento SC3039382
+Curso: ADS – PWR3 Noturno
+*/
+
         do {
             System.out.println("\n** CADASTRO DE ALUNOS **");
             System.out.println("1 - CADASTRAR ALUNOS");
@@ -25,11 +31,11 @@ public class Main {
             System.out.print("Opção: ");
 
             opcao = sc.nextInt();
-            sc.nextLine(); // limpar buffer
+            sc.nextLine(); 
 
             switch (opcao) {
 
-                case 1: // CADASTRAR
+                case 1: 
                     Aluno novo = new Aluno();
 
                     System.out.print("Nome: ");
@@ -54,7 +60,7 @@ public class Main {
                     dao.salvar(novo);
                     break;
 
-                case 2: // EXCLUIR
+                case 2: 
                     System.out.print("Digite o nome: ");
                     String nomeExcluir = sc.nextLine();
 
@@ -67,7 +73,7 @@ public class Main {
                     }
                     break;
 
-                case 3: // ALTERAR
+                case 3: 
                     System.out.print("Digite o nome: ");
                     String nomeAlterar = sc.nextLine();
 
@@ -109,7 +115,7 @@ public class Main {
                     }
                     break;
 
-                case 4: // BUSCAR
+                case 4: 
                     System.out.println("CONSULTAR ALUNO:");
                     System.out.print("Digite o nome: ");
                     String nomeBuscar = sc.nextLine();
